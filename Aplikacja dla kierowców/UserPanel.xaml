@@ -1,0 +1,75 @@
+﻿<Window x:Class="Aplikacja_dla_kierowców.UserPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacja_dla_kierowców"
+        mc:Ignorable="d"
+        Title="Panel Samochodu" Height="600" Width="1000">
+    <Border Padding="10">
+        
+        <!--Grid globalny-->
+        <Grid Background="Snow">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            
+            <!--Tabliczka witająca-->
+            <Grid Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" FontSize="16" Text="Witaj, "/>
+                <TextBlock Grid.Column="1" FontSize="16" x:Name="_UserName"/>
+                <TextBlock Grid.Column="2" FontSize="16" Text="Samochód: "/>
+                <TextBlock Grid.Column="3" FontSize="16" x:Name="_CarName"/>
+            </Grid>
+            
+            <!--Główna tablica-->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <!--Przybornik-->
+                <StackPanel Grid.Column="0">
+                    
+                    <TextBlock Text="Przegląd:"/>
+                    <Button x:Name="Check_CarInfo" Content="O samochodzie" Click="Check_CarInfo_Click"/>
+                    <Button x:Name="Check_Stats" Content="Statystyki" Click="Check_Stats_Click"/>
+                    <Button x:Name="Check_Garage" Content="Mój Garaż" Click="Check_Garage_Click"/>
+                    <Button x:Name="Check_Notes" Content="Moje notatki" Click="Check_Notes_Click"/>
+                    <Button x:Name="Check_Fuel" Content="Moje tankowania" Click="Check_Fuel_Click"/>
+                    <Button x:Name="Check_Repairs" Content="Moje naprawy" Click="Check_Repairs_Click"/>
+
+                    <TextBlock Text="Notowanie: "/>
+                    <Button x:Name="Add_FuelInfo" Content="Dodaj tankowanie" Click="Add_FuelInfo_Click"/>
+                    <Button x:Name="Add_RepairInfo" Content="Dodaj naprawy" Click="Add_RepairInfo_Click"/>
+                    <Button x:Name="Add_Notes" Content="Dodaj notatkę" Click="Add_Notes_Click"/>
+                    
+                    <TextBlock Text="Inne:"/>
+                    <Button x:Name="Return_Btn" Content="Wyloguj" Click="Return_Btn_Click"/>
+                    <Button x:Name="Remove_Btn" Content="Usuń konto" Click="Remove_Btn_Click"/>
+                </StackPanel>
+                
+                <!--Czytnik kart-->
+                <StackPanel Grid.Column="1">
+                    <Frame Padding="10" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+                </StackPanel>
+            </Grid>
+            
+            <!--Ostatnia notatka-->
+            <StackPanel Grid.Row="2">
+                <TextBlock Text="Ostatnia notatka:"/>
+                <TextBlock x:Name="LastNote_Box"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

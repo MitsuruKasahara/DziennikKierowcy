@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplikacja dla kierowców", "Aplikacja dla kierowców\Aplikacja dla kierowców.csproj", "{05DFF8F0-8C4C-43AB-B6E6-21E2C92C40D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTests", "..\AppTests\CarTests\AppTests.csproj", "{35756083-F47D-47BF-ACB4-A1E6C934A46A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05DFF8F0-8C4C-43AB-B6E6-21E2C92C40D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05DFF8F0-8C4C-43AB-B6E6-21E2C92C40D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05DFF8F0-8C4C-43AB-B6E6-21E2C92C40D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05DFF8F0-8C4C-43AB-B6E6-21E2C92C40D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35756083-F47D-47BF-ACB4-A1E6C934A46A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35756083-F47D-47BF-ACB4-A1E6C934A46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35756083-F47D-47BF-ACB4-A1E6C934A46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35756083-F47D-47BF-ACB4-A1E6C934A46A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77CE905C-956D-4F63-B6E0-69D6650C3A55}
+	EndGlobalSection
+EndGlobal

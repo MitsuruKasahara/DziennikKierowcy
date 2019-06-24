@@ -1,0 +1,73 @@
+﻿<Page x:Class="Aplikacja_dla_kierowców.CarInfo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Aplikacja_dla_kierowców"
+      mc:Ignorable="d" 
+      d:DesignHeight="154" d:DesignWidth="400"
+      Title="CarInfo">
+
+    <Grid Margin="15 0 0 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <!--Legenda-->
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Tablica rejestracyjna:   " />
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Właściciel:" />
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Typ paliwa:" />
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Pojemność baku (l):" />
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Marka:" />
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Model:" />
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Rok produkcji:" />
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Numer VIN:" />
+
+            <!--Pola tekstu-->
+            <TextBox Grid.Row="0" Grid.Column="1" x:Name="TB0" Background="LightGray" IsReadOnly="True" Text="{Binding PlateNumber, Mode = OneWay}" Padding="0 0 0 2" />
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="TB1" Background="LightGray" IsReadOnly="True" Text="{Binding DisplayName, Mode = OneWay}" Padding="0 0 0 2" />
+            <ComboBox Grid.Row="2" Grid.Column="1" x:Name="TB2" Background="LightGray" IsEnabled="False" Text="{Binding FuelType, Mode = OneWay}" Padding="0 0 0 3" >
+                <ComboBoxItem>Benzyna</ComboBoxItem>
+                <ComboBoxItem>Diesel</ComboBoxItem>
+                <ComboBoxItem>Elektryk</ComboBoxItem>
+                <ComboBoxItem>LPG</ComboBoxItem>
+            </ComboBox>
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="TB3" Background="LightGray" IsReadOnly="True" Text="{Binding FuelCapacity, Mode = OneWay}" Padding="0 0 0 2" />
+            <TextBox Grid.Row="4" Grid.Column="1" x:Name="TB4" Background="LightGray" IsReadOnly="True" Text="{Binding Manufacturer, Mode = OneWay}" Padding="0 0 0 2" />
+            <TextBox Grid.Row="5" Grid.Column="1" x:Name="TB5" Background="LightGray" IsReadOnly="True" Text="{Binding Model, Mode = OneWay}" Padding="0 0 0 2" />
+            <TextBox Grid.Row="6" Grid.Column="1" x:Name="TB6" Background="LightGray" IsReadOnly="True" Text="{Binding Year , Mode = OneWay}" Padding="0 0 0 2" />
+            <TextBox Grid.Row="7" Grid.Column="1" x:Name="TB7" Background="LightGray" IsReadOnly="True" Text="{Binding VinNumber, Mode = OneWay}" Padding="0 0 0 2" />
+    
+            <!--Przyciski-->
+            <Button Grid.Row="0" Grid.Column="2" x:Name="B0" Content="Zmień" Padding="25 1 25 1" Click="B0_Click"/>
+            <Button Grid.Row="1" Grid.Column="2" x:Name="B1" Content="Zmień" Padding="25 1 25 1" Click="B1_Click"/>
+            <Button Grid.Row="2" Grid.Column="2" x:Name="B2" Content="Zmień" Padding="25 1 25 1" Click="B2_Click"/>
+            <Button Grid.Row="3" Grid.Column="2" x:Name="B3" Content="Zmień" Padding="25 1 25 1" Click="B3_Click"/>
+            <Button Grid.Row="4" Grid.Column="2" x:Name="B4" Content="Zmień" Padding="25 1 25 1" Click="B4_Click"/>
+            <Button Grid.Row="5" Grid.Column="2" x:Name="B5" Content="Zmień" Padding="25 1 25 1" Click="B5_Click"/>
+            <Button Grid.Row="6" Grid.Column="2" x:Name="B6" Content="Zmień" Padding="25 1 25 1" Click="B6_Click"/>
+            <Button Grid.Row="7" Grid.Column="2" x:Name="B7" Content="Zmień" Padding="25 1 25 1" Click="B7_Click"/>
+        </Grid>
+        
+        <!--Ostrzeżenie-->
+        <TextBlock Grid.Row="1" Text="Uwaga! Zmiana właściciela wiąże się z wylogowaniem z panelu samochodu"/>
+    </Grid>
+</Page>

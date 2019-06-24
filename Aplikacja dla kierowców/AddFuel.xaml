@@ -1,0 +1,67 @@
+﻿<Page x:Class="Aplikacja_dla_kierowców.AddFuel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Aplikacja_dla_kierowców"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddFuel">
+
+    <Border Padding="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="22*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBox IsReadOnly="True" Background="LightGray" Text="Opis (np. trasa):" />
+                <TextBox IsReadOnly="True" Background="LightGray" Text="Przejechany dystans: "/>
+                <TextBox IsReadOnly="True" Background="LightGray" Text="Dolano litrów: "/>
+                <TextBox IsReadOnly="True" Background="LightGray" Text="Cena tankowania: "/>
+                <TextBox IsReadOnly="True" Background="LightGray" Text="Cena paliwa: "/>
+                <TextBox IsReadOnly="True" Background="LightGray" Text="Przeciętne spalanie: "/>
+                <TextBox IsReadOnly="True" Background="LightGray" Text="Dystans na terenie zabudowanym: "/>
+                <TextBox IsReadOnly="True" Background="LightGray" Text="Dystans w trasie: "/>
+
+                <StackPanel x:Name="_Info" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <TextBox x:Name="_Description"/>
+                <WrapPanel>
+                    <TextBox Width="200" x:Name="_Distance" GotFocus="GlobalFocus"/>
+                    <TextBlock Text=" kilometrów"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBox Width="200" x:Name="_Litres" GotFocus="GlobalFocus"/>
+                    <TextBlock Text=" litrów"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBox Width="200" x:Name="_Cost" GotFocus="GlobalFocus"/>
+                    <TextBlock Text=" złotych"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBox Width="200" x:Name="_Price" GotFocus="GlobalFocus"/>
+                    <TextBlock Text=" złotych/litr"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBox Width="200" x:Name="_Consumption" GotFocus="GlobalFocus"/>
+                    <TextBlock Text=" litrów/100 kilometrów"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBox Width="50" x:Name="_Area_City" GotFocus="GlobalFocus"/>
+                    <TextBlock Text=" %"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBox Width="50" x:Name="_Area_Open" GotFocus="GlobalFocus"/>
+                    <TextBlock Text=" %"/>
+                    <Button Margin="90 0" x:Name="_Button" Width="50" Content="Dodaj"/>
+                </WrapPanel>
+
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</Page>
